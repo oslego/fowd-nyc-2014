@@ -345,7 +345,70 @@ $codeFont: 'Source Code Pro', monotype;
 		shape-outside: url("../../resources/espresso.png");
 		shape-image-threshold: 0.5;
 	}
+
+	.illustration{
+		position: absolute;
+		top: 0.5em;
+		left: 0;
+		width: calc(350px + 2em);
+		height: calc(350px + 2em);
+		transition: -webkit-clip-path 1s ease-out, opacity, 1s ease-out;
+
+		background: rgba(255, 165, 0, 0.65);
+		background-image: linear-gradient(rgba(255,255,255,.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.4) 1px, transparent 1px);
+		background-size: 20px 20px, 20px 20px;
+		background-position: -1px -1px, -1px -1px;
+
+		opacity: 0;
+
+		&[data-state="1"]{
+			opacity: 1;
+			-webkit-clip-path: circle(75%);
+		}
+
+		&[data-state="1"] + .shape{
+			-webkit-animation: circleShapeOutside 1s ease-out;
+			-webkit-animation-fill-mode: forwards;
+		}
+
+		&[data-state="2"]{
+			opacity: 1;
+			-webkit-clip-path: circle(50%);
+		}
+
+		&[data-state="2"] + .shape{
+			-webkit-animation: circleShapeOutsideReverse 1s ease-out;
+			-webkit-animation-fill-mode: forwards;
+		}
+
+		&[data-state="3"]{
+			opacity: 0;
+			-webkit-clip-path: circle(50%);
+		}
+
+	}
 }
+
+@-webkit-keyframes circleShapeOutside{
+	0% {
+		shape-outside: circle(42%);
+	}
+
+	100%{
+		shape-outside: circle(100%);
+	}
+}
+
+@-webkit-keyframes circleShapeOutsideReverse{
+	0% {
+		shape-outside: circle(100%);
+	}
+
+	100%{
+		shape-outside: circle(41%);
+	}
+}
+
 
 .shapes-illustration{
   div{

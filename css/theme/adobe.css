@@ -330,6 +330,47 @@ body {
   shape-margin: 1em;
   shape-outside: url("../../resources/espresso.png");
   shape-image-threshold: 0.5; }
+.demo--shape-image .illustration {
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  width: calc(350px + 2em);
+  height: calc(350px + 2em);
+  transition: -webkit-clip-path 1s ease-out, opacity, 1s ease-out;
+  background: rgba(255, 165, 0, 0.65);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px;
+  background-position: -1px -1px, -1px -1px;
+  opacity: 0; }
+  .demo--shape-image .illustration[data-state="1"], .demo--shape-image .illustration.masking-illustration[data-state="2"], .demo--shape-image .illustration.masking-illustration[data-state="3"], .demo--shape-image .illustration.masking-illustration[data-state="4"], .demo--shape-image .illustration.masking-illustration[data-state="5"], .demo--shape-image .illustration.masking-illustration[data-state="6"] {
+    opacity: 1;
+    -webkit-clip-path: circle(75%); }
+  .demo--shape-image .illustration[data-state="1"] + .shape, .demo--shape-image .illustration.masking-illustration[data-state="2"] + .shape, .demo--shape-image .illustration.masking-illustration[data-state="3"] + .shape, .demo--shape-image .illustration.masking-illustration[data-state="4"] + .shape, .demo--shape-image .illustration.masking-illustration[data-state="5"] + .shape, .demo--shape-image .illustration.masking-illustration[data-state="6"] + .shape {
+    -webkit-animation: circleShapeOutside 1s ease-out;
+    -webkit-animation-fill-mode: forwards; }
+  .demo--shape-image .illustration[data-state="2"], .demo--shape-image .illustration.masking-illustration[data-state="3"], .demo--shape-image .illustration.masking-illustration[data-state="4"], .demo--shape-image .illustration.masking-illustration[data-state="5"], .demo--shape-image .illustration.masking-illustration[data-state="6"] {
+    opacity: 1;
+    -webkit-clip-path: circle(50%); }
+  .demo--shape-image .illustration[data-state="2"] + .shape, .demo--shape-image .illustration.masking-illustration[data-state="3"] + .shape, .demo--shape-image .illustration.masking-illustration[data-state="4"] + .shape, .demo--shape-image .illustration.masking-illustration[data-state="5"] + .shape, .demo--shape-image .illustration.masking-illustration[data-state="6"] + .shape {
+    -webkit-animation: circleShapeOutsideReverse 1s ease-out;
+    -webkit-animation-fill-mode: forwards; }
+  .demo--shape-image .illustration[data-state="3"], .demo--shape-image .illustration.masking-illustration[data-state="4"], .demo--shape-image .illustration.masking-illustration[data-state="5"], .demo--shape-image .illustration.masking-illustration[data-state="6"] {
+    opacity: 0;
+    -webkit-clip-path: circle(50%); }
+
+@-webkit-keyframes circleShapeOutside {
+  0% {
+    shape-outside: circle(42%); }
+
+  100% {
+    shape-outside: circle(100%); } }
+
+@-webkit-keyframes circleShapeOutsideReverse {
+  0% {
+    shape-outside: circle(100%); }
+
+  100% {
+    shape-outside: circle(41%); } }
 
 .shapes-illustration div {
   background: #ffb900;

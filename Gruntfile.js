@@ -89,6 +89,16 @@ module.exports = function(grunt) {
 			]
 		},
 
+		autoprefixer: {
+	    options: {
+				silent: false
+	    },
+	    single_file: {
+				src: 'css/theme/adobe.css',
+      	dest: 'css/theme/adobe.css'
+	    },
+  	},
+
 		watch: {
 			main: {
 				files: [ 'Gruntfile.js', 'js/reveal.js', 'css/reveal.css' ],
@@ -111,12 +121,13 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
 	grunt.loadNpmTasks( 'grunt-zip' );
+	grunt.loadNpmTasks( 'grunt-autoprefixer' );
 
 	// Default task
 	grunt.registerTask( 'default', [ 'jshint', 'cssmin', 'uglify', 'qunit' ] );
 
 	// Theme task
-	grunt.registerTask( 'themes', [ 'sass' ] );
+	grunt.registerTask( 'themes', [ 'sass', 'autoprefixer' ] );
 
 	// Package presentation to archive
 	grunt.registerTask( 'package', [ 'default', 'zip' ] );

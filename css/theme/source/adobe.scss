@@ -36,7 +36,7 @@ $codeFont: 'Source Code Pro', monotype;
 // ---------------------------------------------
 
 .vignette .reveal .state-background{
-  background-image: -webkit-linear-gradient(240deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.8));
+  background-image: linear-gradient(240deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.8));
   background-size: cover;
 }
 
@@ -97,13 +97,13 @@ $codeFont: 'Source Code Pro', monotype;
 		transform: scale(3.5);
 
 		.deer-head{
-			-webkit-animation: headbob 1.6s infinite ease-out;
-			-webkit-animation-delay: 3s;
+			animation: headbob 1.6s infinite ease-out;
+			animation-delay: 3s;
 		}
 	}
 }
 
-@-webkit-keyframes headbob{
+@keyframes headbob{
 	25%{
 		transform: translate(-1px, 2px);
 	}
@@ -280,7 +280,6 @@ $codeFont: 'Source Code Pro', monotype;
 }
 
 .muted{
-	-webkit-filter: grayscale(1) brightness(1.5);
 	filter: grayscale(1) brightness(1.5);
 }
 
@@ -367,8 +366,8 @@ $codeFont: 'Source Code Pro', monotype;
 		}
 
 		&[data-state="1"] + .shape{
-			-webkit-animation: circleShapeOutside 1s ease-out;
-			-webkit-animation-fill-mode: forwards;
+			animation: circleShapeOutside 1s ease-out;
+			animation-fill-mode: forwards;
 		}
 
 		&[data-state="2"]{
@@ -377,8 +376,8 @@ $codeFont: 'Source Code Pro', monotype;
 		}
 
 		&[data-state="2"] + .shape{
-			-webkit-animation: circleShapeOutsideReverse 1s ease-out;
-			-webkit-animation-fill-mode: forwards;
+			animation: circleShapeOutsideReverse 1s ease-out;
+			animation-fill-mode: forwards;
 		}
 
 		&[data-state="3"]{
@@ -389,7 +388,7 @@ $codeFont: 'Source Code Pro', monotype;
 	}
 }
 
-@-webkit-keyframes circleShapeOutside{
+@keyframes circleShapeOutside{
 	0% {
 		shape-outside: circle(42%);
 	}
@@ -399,7 +398,7 @@ $codeFont: 'Source Code Pro', monotype;
 	}
 }
 
-@-webkit-keyframes circleShapeOutsideReverse{
+@keyframes circleShapeOutsideReverse{
 	0% {
 		shape-outside: circle(100%);
 	}
@@ -671,14 +670,12 @@ $codeFont: 'Source Code Pro', monotype;
 
 	/* ISSUE: https://code.google.com/p/chromium/issues/detail?id=417370 */
 	/* affects Chrome 37, Safari on IOS 8, */
-	-webkit-transform: translate(0,0);
 	transform: translate(0,0);
 }
 
 .clip--text{
 	-webkit-clip-path: url('#clip-text');
 	-moz-clip-path: url('#clip-text');
-	-webkit-transform: translate(0,0) scale(1.5);
 	transform: translate(0,0) scale(1.5);
 	background-size: 400px;
 }
@@ -686,7 +683,7 @@ $codeFont: 'Source Code Pro', monotype;
 .clip--textpath{
 	-webkit-clip-path: url('#clip-textpath');
 	-moz-clip-path: url('#clip-textpath');
-	-webkit-transform: translate(0,0) scale(1);
+	transform: translate(0,0) scale(1);
 	transform: translate(0,0) scale(1);
 	background-size: 400px;
 }

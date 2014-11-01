@@ -301,6 +301,19 @@ body {
     font-family: 'Montserrat', Helvetica, Arial, sans-serif;
     text-shadow: 0 0 20px black; }
 
+.reveal .credits {
+  font-size: 0.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  text-align: left; }
+  .reveal .credits li {
+    max-width: 460px; }
+
 .support-matrix {
   border-collapse: collapse;
   border-spacing: 0;

@@ -230,6 +230,18 @@ $codeFont: 'Source Code Pro', monotype;
 	}
 }
 
+.reveal .credits{
+	font-size: 0.5em;
+	display: flex;
+	flex-flow: column wrap;
+	text-align: left;
+	// column-count: 2; // messes-up link hit-area
+
+	li{
+		max-width: 460px;
+	}
+}
+
 .support-matrix{
 	border-collapse: collapse;
 	border-spacing: 0;

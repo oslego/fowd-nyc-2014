@@ -947,3 +947,34 @@ $codeFont: 'Source Code Pro', monotype;
 	-webkit-mask-image: url(../../resources/mask-paint1.png);
 	background-image: linear-gradient(220deg, lime, royalblue);
 }
+
+.svgmask{
+	width: 100%;
+	height: 600px;
+	margin: 0 auto;
+	position: relative;
+
+	.base{
+		width: 100%;
+		height: 100%;
+		background: url(../../resources/pattern-science.png);
+	}
+
+	&.auto{
+		width: auto;
+		height: auto;
+	}
+}
+
+.reveal .photocredit{
+	display: block;
+	font-size: 0.5em;
+	text-align: right;
+	margin-top: 1em;
+}
+
+.svgmask svg{
+  position: absolute;
+  top: 0;
+  left: 0;
+}

@@ -2,7 +2,9 @@
 
 Slides for my talk at [Future of Web Design](https://futureofwebdesign.com/nyc-2014/) in New York, 2014.
 
-This is a custom interactive slide deck meant to be shown in a controlled environment on stage. It works as expected in Google Chrome.
+This is a custom interactive slide deck meant to be shown in a controlled environment on stage. It works as expected in Google Chrome and offers decent fallbacks to keep content readable.
+
+[Live Demo](https://oslego.github.io/fowd-nyc-2014)
 
 ![Screenshot of slides](screenshot.png)
 

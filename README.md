@@ -4,7 +4,7 @@ Slides for my talk at [Future of Web Design](https://futureofwebdesign.com/nyc-2
 
 This is a custom interactive slide deck meant to be shown in a controlled environment on stage. It works as expected in Google Chrome and offers decent fallbacks to keep content readable.
 
-[Live Demo](https://oslego.github.io/fowd-nyc-2014)
+[Live Demo](https://oslego.github.io/fowd-nyc-2014) | [Static Demo (PDF)](https://speakerdeck.com/razvancaliman/beyond-rectangles-in-web-design-css-shapes-and-css-masking)
 
 ![Screenshot of slides](screenshot.png)
 

@@ -1119,15 +1119,17 @@
 							el.setAttribute('transform', 'translate('+ x +','+ y +') scale(10)');
 							clipPath.appendChild(el);
 
+							// target.style.position = 'absolute';
+
 							var slide = Reveal.getCurrentSlide();
 							// auto-advance fragments
 							if (slide.id === 'svg-clipping'){
 								Reveal.nextFragment();
 							}
 
-							// force relayout to draw mask
-							// FIXME: Canary bug
-							target.style.width = box.width + "px";
+							// FIXME: find a way to invalidate layer
+							target.style.transform = target.style.transform ? 'translate3d(0,0,0)' : 'scale(1.001)';
+
 						}
 					});
 
